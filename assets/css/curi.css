@@ -13,3 +13,72 @@ article th { min-width: 100px; padding: 0 10px 0 10px; }
 
 article td { padding-left: 5px; }
 
+
+
+
+
+
+
+
+/* Table of Contents */
+
+/* https://github.com/tscanlin/tocbot */
+/* https://forum.ghost.org/t/table-of-contents-tutorial-for-casper-version-4-simplified/22584 */
+/* https://tscanlin.github.io/tocbot/ */
+
+
+/* styling background of ToC */
+div#toc {
+/*    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+*/  
+    border: 2px solid #111214;
+    background-color: #fff;
+    padding: 5px;
+    z-index: 1;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+div#toc  ol {
+    list-style-position: inside;
+  /* Cancel out Ghost's default margin-bottom: 30px. */
+    margin-bottom: 0;
+    margin-left: 0px;
+    /* suppress list numbers. */
+    list-style-type: disc;
+}
+
+div#toc li {
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+div#toc aside.toc ol:first-child
+{
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+p.toc-title {
+    font-weight: bold;
+}
+
+div#toc  a.is-active-link {
+    font-weight: bold;
+}
+
+div#toc  li {
+/* line height was big by default, this makes it smaller */
+  line-height:110%;
+}
+
+/* make ToC float on right side if big screen */
+@media only screen and (min-width: 1450px) {
+div#toc  {
+  position: fixed;
+  top: 72px;
+  right: 5px;
+  max-width: 330px;
+}
