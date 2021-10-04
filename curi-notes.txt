@@ -1,0 +1,4 @@
+info on updating to new casper version:
+
+https://grantwinney.com/how-to-customize-the-default-casper-theme-in-ghost/
+
