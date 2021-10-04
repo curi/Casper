@@ -40,6 +40,7 @@ div#toc {
     margin: 0 auto;
 }
 
+
 div#toc  ol {
     list-style-position: inside;
   /* Cancel out Ghost's default margin-bottom: 30px. */
