@@ -35,6 +35,16 @@ into the {body} of the default.hbs template --}}
     {{content}}
 {{/post}}
 
+<details open>
+    <summary>Critical Fallibilism</summary>
+    <ul>
+    {{#get "posts" filter="tags:critical-fallibilism" limit='9999'}}
+        {{#foreach posts}}
+             <li><a href="{{url}}">{{title}}</a></li>
+        {{/foreach}}
+    {{/get}}
+    </ul>
+</details>
 
 <details open>
     <summary>Classics</summary>
