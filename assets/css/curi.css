@@ -36,8 +36,8 @@ div#toc {
     background-color: #fff;
     padding: 5px;
     z-index: 1;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 0;
 }
 
 
@@ -45,9 +45,10 @@ div#toc  ol {
     list-style-position: inside;
   /* Cancel out Ghost's default margin-bottom: 30px. */
     margin-bottom: 0;
-    margin-left: 0px;
     /* suppress list numbers. */
     list-style-type: disc;
+    
+    padding-right: 5px;
 }
 
 div#toc li {
@@ -61,6 +62,10 @@ div#toc aside.toc ol:first-child
     list-style-type: none;
 }
 
+div#toc  ol {
+    padding-right: 0px;
+}
+
 p.toc-title {
     font-weight: bold;
 }
@@ -71,7 +76,7 @@ div#toc  a.is-active-link {
 
 div#toc  li {
 /* line height was big by default, this makes it smaller */
-  line-height:110%;
+  line-height: 110%;
 }
 
 /* make ToC float on right side if big screen */
