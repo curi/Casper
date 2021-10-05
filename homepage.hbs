@@ -48,6 +48,7 @@ into the {body} of the default.hbs template --}}
 
 <details open>
     <summary>Classics</summary>
+    <p>Classics articles summarize and link to Elliot's older work.</p>
     <ul>
     {{#get "posts" filter="tags:classics" limit='9999'}}
         {{#foreach posts}}
