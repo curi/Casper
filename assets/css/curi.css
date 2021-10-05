@@ -16,6 +16,19 @@ article td { padding-left: 5px; }
 
 
 
+/* override paragraph spacing to lower it for large screens */
+.gh-content>*+* {
+/*margin-top: 4vmin;*/
+    margin-top: 1em;
+}
+
+mjx-container {
+    margin: 0 !important;
+}
+
+/*.MathJax {
+    margin: 0 !important;
+}*/
 
 
 
