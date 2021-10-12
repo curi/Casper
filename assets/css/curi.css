@@ -15,6 +15,11 @@ article td { padding-left: 5px; }
 
 
 
+p.tag-description {
+    margin-bottom: 0.3em;
+    font-size: 90%;
+}
+
 
 /* override paragraph spacing to lower it for large screens */
 .gh-content>*+* {

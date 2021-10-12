@@ -37,8 +37,29 @@ into the {body} of the default.hbs template --}}
 
 <details open>
     <summary>Critical Fallibilism</summary>
+    {{#get "tags" limit="1" filter="slug:critical-fallibilism"}}
+        {{#foreach tags}}
+            <p class="tag-description">{{description}}</p>
+        {{/foreach}}
+    {{/get}}
     <ul>
-    {{#get "posts" filter="tags:critical-fallibilism" limit='9999'}}
+    {{#get "posts" filter="tags:critical-fallibilism" limit='9999' order='published_at asc'}}
+        {{#foreach posts}}
+             <li><a href="{{url}}">{{title}}</a></li>
+        {{/foreach}}
+    {{/get}}
+    </ul>
+</details>
+
+<details open>
+    <summary>Research</summary>
+    {{#get "tags" limit="1" filter="slug:research"}}
+        {{#foreach tags}}
+            <p class="tag-description">{{description}}</p>
+        {{/foreach}}
+    {{/get}}
+    <ul>
+    {{#get "posts" filter="tags:research" limit='9999' order='published_at asc'}}
         {{#foreach posts}}
              <li><a href="{{url}}">{{title}}</a></li>
         {{/foreach}}
@@ -48,9 +69,13 @@ into the {body} of the default.hbs template --}}
 
 <details open>
     <summary>Classics</summary>
-    <p>Classics articles summarize and link to Elliot's older work.</p>
+    {{#get "tags" limit="1" filter="slug:classics"}}
+        {{#foreach tags}}
+            <p class="tag-description">{{description}}</p>
+        {{/foreach}}
+    {{/get}}
     <ul>
-    {{#get "posts" filter="tags:classics" limit='9999'}}
+    {{#get "posts" filter="tags:classics" limit='9999' order='published_at asc'}}
         {{#foreach posts}}
              <li><a href="{{url}}">{{title}}</a></li>
         {{/foreach}}
