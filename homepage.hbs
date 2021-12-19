@@ -59,7 +59,7 @@ into the {body} of the default.hbs template --}}
         {{/foreach}}
     {{/get}}
     <ul>
-    {{#get "posts" filter="tags:research" limit='9999' order='published_at asc'}}
+    {{#get "posts" filter="tags:research" limit='9999' order='published_at desc'}}
         {{#foreach posts}}
              <li><a href="{{url}}">{{title}}</a></li>
         {{/foreach}}
