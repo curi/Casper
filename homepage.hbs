@@ -36,6 +36,17 @@ into the {body} of the default.hbs template --}}
 {{/post}}
 
 <details open>
+    <summary>Recent Articles</summary>
+    <ul>
+    {{#get "posts" limit='15' order='published_at asc'}}
+        {{#foreach posts}}
+             <li><a href="{{url}}">{{title}}</a></li>
+        {{/foreach}}
+    {{/get}}
+    </ul>
+</details>
+
+<details open>
     <summary>Critical Fallibilism</summary>
     {{#get "tags" limit="1" filter="slug:critical-fallibilism"}}
         {{#foreach tags}}
@@ -51,7 +62,7 @@ into the {body} of the default.hbs template --}}
     </ul>
 </details>
 
-<details open>
+<details closed>
     <summary>Research</summary>
     {{#get "tags" limit="1" filter="slug:research"}}
         {{#foreach tags}}
@@ -67,7 +78,7 @@ into the {body} of the default.hbs template --}}
     </ul>
 </details>
 
-<details open>
+<details closed>
     <summary>Classics</summary>
     {{#get "tags" limit="1" filter="slug:classics"}}
         {{#foreach tags}}
