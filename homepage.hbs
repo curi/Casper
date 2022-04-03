@@ -38,7 +38,7 @@ into the {body} of the default.hbs template --}}
 <details open>
     <summary>Recent Articles</summary>
     <ul>
-    {{#get "posts" limit='15' order='published_at asc'}}
+    {{#get "posts" limit='15' order='published_at desc'}}
         {{#foreach posts}}
              <li><a href="{{url}}">{{title}}</a></li>
         {{/foreach}}
