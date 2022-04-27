@@ -54,7 +54,7 @@ into the {body} of the default.hbs template --}}
 <details open>
     <summary>Recent Articles</summary>
     <ul>
-    {{#get "posts" limit='15' order='published_at desc'}}
+    {{#get "posts" filter="tags:-news" limit='15' order='published_at desc'}}
         {{#foreach posts}}
              <li><a href="{{url}}">{{title}}</a></li>
         {{/foreach}}
@@ -96,6 +96,18 @@ into the {body} of the default.hbs template --}}
     </ul>
 </details>
 
+<details closed>
+    <summary>News</summary>
+    <ul>
+    {{#get "posts" filter="tags:news" limit='9999' order='published_at desc'}}
+        {{#foreach posts}}
+             <li><a href="{{url}}">{{title}}</a></li>
+        {{/foreach}}
+    {{/get}}
+    </ul>
+</details>
+
         </section>
     </article>
 </main>
+
