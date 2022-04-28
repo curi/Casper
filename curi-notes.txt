@@ -2,3 +2,108 @@ info on updating to new casper version:
 
 https://grantwinney.com/how-to-customize-the-default-casper-theme-in-ghost/
 
+
+https://github.com/TryGhost/Casper
+
+
+git remote add upstream https://github.com/TryGhost/Casper.git
+git fetch upstream
+git pull upstream main
+
+
+# added to .gitconfig
+updatecasper = !cd /Users/curi/Dropbox/c/www/cfghost/content/themes/casper-curi && git fetch upstream && git pull upstream master && git push
+
+
+cd /Users/curi/Dropbox/c/www/cfghost
+ghost status
+ghost start
+
+
+# changes to casper:
+
+Only in casper-curi: curi-notes.txt
+Only in casper-curi: custom-tags.hbs
+Only in casper-curi: homepage.hbs
+Only in casper-curi: posts.hbs
+
+
+# casper-curi/package.json
+changed name to casper-curi
+
+
+# casper-curi/post.hbs
+
+added table of contents
+
+
+
+######## details (diff after 4.7.4 update)
+# diff casper-curi casper-curi-2|e
+
+Binary files casper-curi/.DS_Store and casper-curi-2/.DS_Store differ
+Only in casper-curi: .git
+Only in casper-curi: .github
+Only in casper-curi: .gitignore
+Common subdirectories: casper-curi/assets and casper-curi-2/assets
+Only in casper-curi: curi-notes.txt
+Only in casper-curi: custom-tags.hbs
+diff casper-curi/default.hbs casper-curi-2/default.hbs
+24d23
+<     <link rel="stylesheet" type="text/css" href="{{asset "css/curi.css"}}" />
+73c72
+<     <main>
+---
+>     <div class="site-content">
+76c75
+<     </main>
+---
+>     </div>
+diff casper-curi/package.json casper-curi-2/package.json
+2c2
+<     "name": "casper-curi",
+---
+>     "name": "casper",
+Common subdirectories: casper-curi/partials and casper-curi-2/partials
+diff casper-curi/post.hbs casper-curi-2/post.hbs
+72,73d71
+< 
+< 
+75,83d72
+<         
+<             {{#has tag="#toc"}}
+<                 <div id="toc">
+<                     <p class="toc-title">Table of Contents</p>
+<                     <aside class="toc">
+<                     </aside>
+<                 </div>
+<             {{/has}}
+<         
+136,157c125
+< {{#has tag="#toc"}}
+<     <!-- table of contents -->
+<     <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js" integrity="sha384-TnuMTlegqfBi40E9e3dO2qfmPVKDjLFCCgyZ5bR3SA/hYTJXI090bTbAr/AXO+bc" crossorigin="anonymous"></script>
+<  
+<     <script>
+<     tocbot.init({
+<     // Where to render the table of contents.
+<     tocSelector: '.toc',
+<     // Where to grab the headings to build the table of contents.
+<     contentSelector: 'article',
+<     // Which headings to grab inside of the contentSelector element.
+<     headingSelector: 'h1, h2, h3, h4, h5, h6' ,
+<     // For headings inside relative or absolute positioned containers within content.
+<     hasInnerContainers: true,
+<     ignoreSelector: '.author-name'
+<     });
+<     </script>
+< {{/has}}
+< 
+< {{/post}}
+< 
+< 
+---
+> {{/post}}
+\ No newline at end of file
+Only in casper-curi: posts.hbs
+
