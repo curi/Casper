@@ -142,3 +142,14 @@ div#toc  {
 /* DEFAULT: padding: 18vmin 4vmin;*/
     padding: 4vmin 4vmin;
 }
+
+
+.article {
+/* DEFAULT: padding: 8vmin 0; */
+    padding: min(2em, 8vmin) 0;
+}
+
+.article-header {
+	/* DEFAULT: padding: 0 0 6vmin 0; */
+    padding: 0 0 min(1em, 6vmin) 0;
+}
