@@ -135,3 +135,10 @@ div#toc  {
   right: 10px;
   max-width: 330px;
 }
+
+
+
+.site-header-content {
+/* DEFAULT: padding: 18vmin 4vmin;*/
+    padding: 4vmin 4vmin;
+}
