@@ -25,17 +25,34 @@ p.tag-description {
 }
 
 
+/* https://stackoverflow.com/questions/38078957/can-we-define-min-margin-and-max-margin-max-padding-and-min-padding-in-css */
+
 /* override paragraph spacing to lower it for large screens */
 .gh-content>*+* {
-/*margin-top: 4vmin;*/
-    margin-top: 1em;
+/*DEFAULT: margin-top: 4vmin;*/
+    margin-top: min(1em, 4vmin);
+/*    margin-top: 1em;*/
+/*	margin-top: 0;*/
 }
 
 
 /* lower space before headers. there is still a lot of space for blockquotes */
 .gh-content>[id]:not(:first-child) {
-/* margin: 2em 0 0; */
+/* DEFAULT margin: 2em 0 0; */
 margin: 1.5em 0 0;
+/*margin: 0;*/
+}
+
+/* lower space before hr's and blockquotes*/
+.gh-content > hr,
+.gh-content > blockquote {
+/* DEFAULT:    margin-top: 6vmin;*/
+	margin-top: min(1.5em, 6vmin);
+}
+.gh-content > hr + *,
+.gh-content > blockquote + * {
+	/*  DEFAULT:  margin-top: 6vmin !important;*/
+	margin-top: min(1.5em, 6vmin) !important;
 }
 
 /* lower space around mathjax */

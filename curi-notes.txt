@@ -26,6 +26,7 @@ Only in casper-curi: curi-notes.txt
 Only in casper-curi: custom-tags.hbs
 Only in casper-curi: homepage.hbs
 Only in casper-curi: posts.hbs
+Only in casper-curi: curi.css
 
 
 # casper-curi/package.json
@@ -36,19 +37,23 @@ changed name to casper-curi
 
 added table of contents
 
+# casper-curi/default.hbs
+
+added curi.css
 
 
 ######## details (diff after 4.7.4 update)
-# diff casper-curi casper-curi-2|e
+# diff -r casper-curi casper-4.7.4 | e
 
-Binary files casper-curi/.DS_Store and casper-curi-2/.DS_Store differ
+Binary files casper-curi/.DS_Store and casper-4.7.4/.DS_Store differ
 Only in casper-curi: .git
 Only in casper-curi: .github
 Only in casper-curi: .gitignore
-Common subdirectories: casper-curi/assets and casper-curi-2/assets
+Binary files casper-curi/assets/.DS_Store and casper-4.7.4/assets/.DS_Store differ
+Only in casper-curi/assets/css: curi.css
 Only in casper-curi: curi-notes.txt
 Only in casper-curi: custom-tags.hbs
-diff casper-curi/default.hbs casper-curi-2/default.hbs
+diff -r casper-curi/default.hbs casper-4.7.4/default.hbs
 24d23
 <     <link rel="stylesheet" type="text/css" href="{{asset "css/curi.css"}}" />
 73c72
@@ -59,13 +64,12 @@ diff casper-curi/default.hbs casper-curi-2/default.hbs
 <     </main>
 ---
 >     </div>
-diff casper-curi/package.json casper-curi-2/package.json
+diff -r casper-curi/package.json casper-4.7.4/package.json
 2c2
 <     "name": "casper-curi",
 ---
 >     "name": "casper",
-Common subdirectories: casper-curi/partials and casper-curi-2/partials
-diff casper-curi/post.hbs casper-curi-2/post.hbs
+diff -r casper-curi/post.hbs casper-4.7.4/post.hbs
 72,73d71
 < 
 < 
@@ -106,4 +110,3 @@ diff casper-curi/post.hbs casper-curi-2/post.hbs
 > {{/post}}
 \ No newline at end of file
 Only in casper-curi: posts.hbs
-
