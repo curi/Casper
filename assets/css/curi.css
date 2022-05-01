@@ -138,18 +138,18 @@ div#toc  {
 
 
 
-.site-header-content {
+body div.site-header-content {
 /* DEFAULT: padding: 18vmin 4vmin;*/
     padding: 4vmin 4vmin;
 }
 
 
-.article {
+body .article {
 /* DEFAULT: padding: 8vmin 0; */
     padding: min(2em, 8vmin) 0;
 }
 
-.article-header {
+body .article-header {
 	/* DEFAULT: padding: 0 0 6vmin 0; */
     padding: 0 0 min(1em, 6vmin) 0;
 }
