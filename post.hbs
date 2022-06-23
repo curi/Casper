@@ -12,11 +12,16 @@ into the {body} tag of the default.hbs template --}}
 
     <header class="article-header gh-canvas">
 
-        {{#if primary_tag}}
-            <section class="article-tag post-card-primary-tag">
-                <a href="{{primary_tag.url}}">{{primary_tag.name}}</a>
-            </section>
-        {{/if}}
+        <div class="article-tag post-card-tags">
+            {{#primary_tag}}
+                <span class="post-card-primary-tag">
+                    <a href="{{url}}">{{name}}</a>
+                </span>
+            {{/primary_tag}}
+            {{#if featured}}
+                <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
+            {{/if}}
+        </div>
 
         <h1 class="article-title">{{title}}</h1>
 
@@ -45,7 +50,9 @@ into the {body} tag of the default.hbs template --}}
                 <h4 class="author-name">{{authors}}</h4>
                 <div class="byline-meta-content">
                     <time class="byline-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-                    <span class="byline-reading-time"><span class="bull">&bull;</span> {{reading_time}}</span>
+                    {{#if reading_time}}
+                        <span class="byline-reading-time"><span class="bull">&bull;</span> {{reading_time}}</span>
+                    {{/if}}
                 </div>
             </div>
 
@@ -102,7 +109,9 @@ into the {body} tag of the default.hbs template --}}
 </main>
 
 {{!-- A signup call to action is displayed here, unless viewed as a logged-in member --}}
-{{#unless @member}}{{#if access}}
+{{#if @site.members_enabled}}
+{{#unless @member}}
+{{#if access}}
     <section class="footer-cta outer">
         <div class="inner">
             {{#if @custom.email_signup_text}}<h2 class="footer-cta-title">{{@custom.email_signup_text}}</h2>{{/if}}
@@ -114,7 +123,9 @@ into the {body} tag of the default.hbs template --}}
             making the form validation and submission much simpler. --}}
         </div>
     </section>
-{{/if}}{{/unless}}
+{{/if}}
+{{/unless}}
+{{/if}}
 
 
 {{!-- Read more links, just above the footer --}}
@@ -124,7 +135,7 @@ into the {body} tag of the default.hbs template --}}
 
     This query gets the latest 3 posts on the site, but adds a filter to
     exclude the post we're currently on from being included. --}}
-    {{#get "posts" filter="id:-{{id}}" include="authors" limit="3" as |more_posts|}}
+    {{#get "posts" filter="id:-{{id}}" limit="3" as |more_posts|}}
 
         {{#if more_posts}}
             <aside class="read-more-wrap outer">
