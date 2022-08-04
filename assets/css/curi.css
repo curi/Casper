@@ -145,10 +145,16 @@ body div.site-header-content {
 
 }
 
-body.has-cover-image div.site-header-content {
+body.has-cover div.site-header-content {
 	/*default min-height 560px*/
 		min-height: 200px;
 }
+
+/*.has-cover .site-header-content {
+    min-height: 560px;
+    background-color: var(--ghost-accent-color);
+    color: #fff;
+}*/
 
 /*body div.site-header-cover {
     position: absolute;
