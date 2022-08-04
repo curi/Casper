@@ -77,14 +77,14 @@ into the {body} of the default.hbs template --}}
 
 
 <details closed>
-    <summary>Practice</summary>
-    {{#get "tags" limit="1" filter="slug:practice"}}
+    <summary>Skills</summary>
+    {{#get "tags" limit="1" filter="slug:skills"}}
         {{#foreach tags}}
             <p class="tag-description">{{description}}</p>
         {{/foreach}}
     {{/get}}
     <ul>
-    {{#get "posts" filter="tags:practice" limit='9999' order='published_at asc'}}
+    {{#get "posts" filter="tags:skills" limit='9999' order='published_at asc'}}
         {{#foreach posts}}
              <li><a href="{{url}}">{{title}}</a></li>
         {{/foreach}}
