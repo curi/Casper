@@ -129,13 +129,13 @@ div#toc  li {
 
 /* make ToC float on right side if big screen */
 @media only screen and (min-width: 1450px) {
-div#toc  {
-  position: fixed;
-  top: 100px;
-  right: 10px;
-  max-width: 330px;
+	div#toc  {
+	  position: fixed;
+	  top: 100px;
+	  right: 10px;
+	  max-width: 330px;
+	}
 }
-
 
 @media (prefers-color-scheme: dark) {
     html div#toc {
