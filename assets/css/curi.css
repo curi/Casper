@@ -137,6 +137,17 @@ div#toc  {
 }
 
 
+@media (prefers-color-scheme: dark) {
+    html div#toc {
+/*        color: rgba(255, 255, 255, 0.75);*/
+/*        background: var(--color-darkmode);*/
+		background-color: var(--color-darkmode);
+	    border: 2px solid 979797;
+    }
+}
+
+
+
 
 body div.site-header-content {
 /* DEFAULT: padding: 18vmin 4vmin;*/
