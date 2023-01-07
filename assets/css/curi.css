@@ -80,7 +80,7 @@ div#toc {
     background-color: #f8f9fa;
 */  
     border: 2px solid #111214;
-    background-color: #fff;
+/*    background-color: #fff;*/
     padding: 5px;
     z-index: 1;
     max-width: 500px;
@@ -141,8 +141,11 @@ div#toc  {
     html div#toc {
 /*        color: rgba(255, 255, 255, 0.75);*/
 /*        background: var(--color-darkmode);*/
-		background-color: var(--color-darkmode);
-	    border: 2px solid 979797;
+/*	    border: 2px solid 979797;*/
+
+
+		/*		background-color: var(--color-darkmode);*/
+		border: 2px solid rgba(255, 255, 255, 0.75);
     }
 }
 
