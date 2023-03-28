@@ -79,7 +79,7 @@ into the {body} of the default.hbs template --}}
 </details>
 
 
-<details closed>
+<details open>
     <summary>Skills</summary>
     {{#get "tags" limit="1" filter="slug:skills"}}
         {{#foreach tags}}
@@ -104,7 +104,23 @@ into the {body} of the default.hbs template --}}
         {{/foreach}}
     {{/get}}
     <ul>
-    {{#get "posts" filter="tags:research" limit='9999' order='published_at asc'}}
+    {{#get "posts" filter="tags:research" limit='9999' order='published_at desc'}}
+        {{#foreach posts}}
+             <li><a href="{{url}}">{{title}}</a></li>
+        {{/foreach}}
+    {{/get}}
+    </ul>
+</details>
+
+<details closed>
+    <summary>Shorts</summary>
+    {{#get "tags" limit="1" filter="slug:shorts"}}
+        {{#foreach tags}}
+            <p class="tag-description">{{description}}</p>
+        {{/foreach}}
+    {{/get}}
+    <ul>
+    {{#get "posts" filter="tags:shorts" limit='9999' order='published_at desc'}}
         {{#foreach posts}}
              <li><a href="{{url}}">{{title}}</a></li>
         {{/foreach}}

@@ -1,6 +1,11 @@
 TODO: improve multi-paragraph blockquotes
 
 
+to make changes to my casper theme, just edit, git commit, git push
+
+
+
+
 info on updating to new casper version:
 
 https://grantwinney.com/how-to-customize-the-default-casper-theme-in-ghost/
@@ -23,6 +28,8 @@ ghost status
 ghost start
 
 
+
+
 # changes to casper:
 
 Only in casper-curi: curi-notes.txt
@@ -30,6 +37,16 @@ Only in casper-curi: custom-tags.hbs
 Only in casper-curi: homepage.hbs
 Only in casper-curi: posts.hbs
 Only in casper-curi: curi.css (changes margins on p, hr, blockquote, headers)
+
+
+
+
+
+
+
+
+
+
 
 
 # casper-curi/package.json
