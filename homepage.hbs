@@ -115,11 +115,6 @@ into the {body} of the default.hbs template --}}
 
 <details closed>
     <summary>Shorts</summary>
-    {{#get "tags" limit="1" filter="slug:shorts"}}
-        {{#foreach tags}}
-            <p class="tag-description">{{description}}</p>
-        {{/foreach}}
-    {{/get}}
     <ul>
     {{#get "posts" filter="tags:shorts" limit='9999' order='published_at desc'}}
         {{#foreach posts}}
