@@ -53,11 +53,7 @@ into the {body} of the default.hbs template --}}
 
 <details open>
     <summary>Critical Fallibilism</summary>
-    {{#get "tags" limit="1" filter="slug:critical-fallibilism"}}
-        {{#foreach tags}}
-            <p class="tag-description">{{description}}</p>
-        {{/foreach}}
-    {{/get}}
+
     <ul>
     {{#get "posts" filter="tags:critical-fallibilism" limit='9999' order='published_at asc'}}
         {{#foreach posts}}
