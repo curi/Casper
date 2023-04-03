@@ -193,4 +193,14 @@ body .article-header {
 }
 
 
-/* read-more-wrap */
+
+/* add left borders on nested blockquotes */
+blockquote > blockquote {
+	border-left: 0.3rem solid var(--ghost-accent-color);
+	margin: 0;
+}
+
+/* within a blockquote, a paragraph or blockquote followed by a paragraph should have a top margin on the following paragraph*/
+blockquote p + p, blockquote blockquote + p {
+	margin-block-start: 1em;
+}
