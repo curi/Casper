@@ -92,7 +92,7 @@ into the {body} of the default.hbs template --}}
     </ul>
 </details>
 
-<details open>
+<details closed>
     <summary>Applications</summary>
     {{#get "tags" limit="1" filter="slug:applications"}}
         {{#foreach tags}}
@@ -100,7 +100,7 @@ into the {body} of the default.hbs template --}}
         {{/foreach}}
     {{/get}}
     <ul>
-    {{#get "posts" filter="tags:applications" limit='9999' order='published_at asc'}}
+    {{#get "posts" filter="tags:applications" limit='9999' order='published_at desc'}}
         {{#foreach posts}}
              <li><a href="{{url}}">{{title}}</a></li>
         {{/foreach}}
