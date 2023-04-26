@@ -200,8 +200,8 @@ blockquote > blockquote {
 	margin: 0;
 }
 
-/* within a blockquote, a paragraph or blockquote followed by a paragraph should have a top margin on the following paragraph*/
-blockquote p + p, blockquote blockquote + p {
+/* within a blockquote, a paragraph or blockquote followed by a paragraph or blockquote should have a top margin on the following paragraph*/
+blockquote p + p, blockquote blockquote + p, blockquote p + blockquote {
 	margin-block-start: 1em;
 }
 
