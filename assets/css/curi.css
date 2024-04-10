@@ -8,6 +8,11 @@ div.details_area {
 
 details summary {
     font-size: 120%;
+/*	margin-top: 10px;*/
+    margin-bottom: 10px;
+}
+
+details {
     margin-bottom: 10px;
 }
 
